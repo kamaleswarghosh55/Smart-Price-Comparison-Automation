@@ -1,8 +1,3 @@
-Here is a **fresh, clean, well-structured, bullet-point–based, recruiter-friendly README.md**, written in a **human tone**, not AI-generated.
-It looks professional, modern, and product-company–ready.
-
-You can **copy–paste this directly** into your GitHub README.md ✔️
-
 ---
 
 # **Smart Price Comparison Automation**
