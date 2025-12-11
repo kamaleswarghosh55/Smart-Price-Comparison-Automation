@@ -1,2 +1,5 @@
-# Smart-Price-Comparison-Automation
-Selenium automation project that compares live product prices across Amazon, Flipkart, and Croma using POM + TestNG + Excel reporting.
+![Java](https://img.shields.io/badge/Java-17-orange)
+![Selenium](https://img.shields.io/badge/Selenium-Automation-brightgreen)
+![TestNG](https://img.shields.io/badge/TestNG-Testing-blue)
+![Maven](https://img.shields.io/badge/Maven-Build-red)
+![POM](https://img.shields.io/badge/Framework-POM-yellow)
