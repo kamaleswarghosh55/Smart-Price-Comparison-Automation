@@ -1,181 +1,138 @@
----
+**Smart Price Comparison Automation**
 
-# **Smart Price Comparison Automation**
+This project is a Selenium-based automation framework that compares the price of a product across three e-commerce websites: Amazon, Flipkart, and Croma.
+The script searches for a product, extracts the price from each site, compares the values, and generates an Excel report with the results.
 
-*A practical Selenium automation framework built to compare live product prices across e-commerce websites.*
+**1. Project Overview
+**
+The goal of this project is to demonstrate how automation can be applied to a practical scenario like price comparison.
+The framework is designed using the Page Object Model (POM) to ensure clean structure, maintainability, and scalability.
 
----
+**Key actions performed:
+**
+Open each website
 
-## ** Project Overview**
+Search for a product
 
-This project automates the process of checking and comparing the price of a product across:
+Extract the displayed price
 
-* **Amazon**
-* **Flipkart**
-* **Croma**
+Compare prices
 
-The framework searches for a product, extracts its price, compares the values, and generates an **Excel report** showing the final results.
+Write the results to an Excel file
 
----
+**2. Key Features
+**
+Live price extraction from three real e-commerce platforms
 
-## ** Key Highlights**
+Selenium WebDriver automation with dynamic waits
 
-* **Live website automation** (no mock or practice sites)
-* **Extracts real-time product prices** using reliable locators
-* **Compares pricing data** across multiple websites
-* **Outputs clean Excel reports** with pricing information
-* **Designed using POM (Page Object Model)** for easy maintenance
-* **Readable, modular, and scalable test structure**
+Clean Page Object Model (POM) design
 
----
+Modular test structure using TestNG
 
-## ** Tech Stack & Tools**
+Excel reporting using Apache POI
 
-* **Language:** Java
-* **Automation:** Selenium WebDriver
-* **Testing Framework:** TestNG
-* **Design Pattern:** Page Object Model (POM)
-* **Build Tool:** Maven
-* **Reporting:** Apache POI (Excel)
-* **Version Control:** Git & GitHub
-* **IDE:** IntelliJ IDEA
+Easily extendable to additional websites
 
----
+**3. Tech Stack
+**
+Java
 
-## ** Project Structure**
+Selenium WebDriver
 
-```
-src/
+TestNG
+
+Maven
+
+Apache POI (Excel)
+
+IntelliJ IDEA
+
+Git & GitHub
+
+**4. Project Structure
+**src/
  ├─ main/
  │   └─ java/
- │        ├─ pages/        → Page classes for each website
- │        └─ utils/        → DriverFactory, ExcelWriter
+ │        ├─ pages/        → Page classes for Amazon, Flipkart, Croma
+ │        └─ utils/        → DriverFactory and ExcelWriter
  │
  └─ test/
       └─ java/
-           └─ tests/       → BaseTest + PriceComparisonTest
+           └─ tests/       → BaseTest and PriceComparisonTest
 
 pom.xml
 testng.xml
 README.md
-```
 
----
-
-## ** What This Project Demonstrates**
-
-* Ability to **design a clean automation framework**
-* Strong understanding of **locators, waits, and dynamic elements**
-* Experience working with **real production websites**
-* Good structure using **POM + utilities + TestNG**
-* Knowledge of **data extraction + reporting**
-* Practical thinking by automating a real use case
-
-This is exactly the type of project product companies like to see in a fresher's profile.
-
----
-
-## ** How to Run the Project**
-
-### **1. Clone the repository**
-
-```bash
+**5. How to Run the Project
+**Step 1: Clone the repository
 git clone https://github.com/kamaleswarghosh55/Smart-Price-Comparison-Automation.git
-```
 
-### **2. Install dependencies**
-
-```bash
+Step 2: Install dependencies
 mvn clean install
-```
 
-### **3. Run the test suite**
+Step 3: Run the test suite
 
-* Run `testng.xml` from IntelliJ
-  **or**
+Option A: Right-click testng.xml → Run
+Option B:
 
-```bash
 mvn test
-```
 
----
+**6. Output Report
+**
+After execution, an Excel file is created:
 
-## ** Excel Report Output**
-
-After the test completes, an Excel file is generated:
-
-```
 PriceComparisonReport.xlsx
-```
 
-It includes:
 
-* Price from Amazon
-* Price from Flipkart
-* Price from Croma
-* Lowest available price
+The report includes:
 
----
+Product name
 
-## ** Framework Components (Short Explanation)**
+Price from Amazon
 
-### ** pages/**
+Price from Flipkart
 
-Contains all website-specific actions
+Price from Croma
 
-* `AmazonPage.java`
-* `FlipkartPage.java`
-* `CromaPage.java`
+Lowest price
 
-Each class handles:
+**7. Framework Components
+**pages/
 
-* Searching the product
-* Extracting the price
+Contains page classes for each website.
+Each class includes methods for searching and extracting prices.
 
----
+utils/
 
-### ** utils/**
+DriverFactory: Handles WebDriver setup and teardown
 
-Reusable helper classes
+ExcelWriter: Writes extracted values to Excel
 
-* `DriverFactory.java` → WebDriver setup and teardown
-* `ExcelWriter.java` → Writes results into Excel
+tests/
 
----
+BaseTest: Initializes and closes the browser
 
-### ** tests/**
+PriceComparisonTest: Contains the complete comparison workflow
 
-Full test flow
+**8. Future Enhancements
+**
+Add HTML reporting (Allure or Extent Reports)
 
-* `BaseTest.java` → Parent class for tests
-* `PriceComparisonTest.java` → Main comparison logic
+Add logging and screenshots
 
----
+Add support for more e-commerce websites
 
-## ** Future Enhancements**
+Include CI/CD pipeline using GitHub Actions
 
-* Add HTML reporting (Allure or Extent)
-* Add failure screenshots
-* Parallel execution using TestNG
-* Integrate GitHub Actions (CI pipeline)
-* Extend to Reliance Digital / TataCliq / Vijay Sales
-* Add product list (read from Excel or JSON)
+Add parallel test execution
 
----
+**9. Author
+**
+Kamaleswar Ghosh
+Email: kamaleswarghosh55@gmail.com
 
-## ** Author**
+GitHub: https://github.com/kamaleswarghosh55
 
-**Kamaleswar Ghosh**
-
-* GitHub: [https://github.com/kamaleswarghosh55](https://github.com/kamaleswarghosh55)
-* LinkedIn: [https://linkedin.com/in/kamaleswarghosh55](https://linkedin.com/in/kamaleswarghosh55)
-* Email: *[kamaleswarghosh55@gmail.com](mailto:kamaleswarghosh55@gmail.com)*
-
----
-
-##  **Support the Project**
-
-If you find this project useful, please consider giving it a **star** on GitHub.
-It helps others discover it and motivates further improvements.
-
----
+LinkedIn: https://linkedin.com/in/kamaleswarghosh55
