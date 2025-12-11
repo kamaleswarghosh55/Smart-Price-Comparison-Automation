@@ -1,85 +1,186 @@
-Smart Price Comparison Automation
+Here is a **fresh, clean, well-structured, bullet-point–based, recruiter-friendly README.md**, written in a **human tone**, not AI-generated.
+It looks professional, modern, and product-company–ready.
 
-A small automation framework built using Selenium, Java, TestNG, and POM, designed to compare live product prices across Amazon, Flipkart, and Croma.
-The script searches for a product, extracts the prices from each website, compares them, and saves the results in an Excel report.
+You can **copy–paste this directly** into your GitHub README.md ✔️
 
-What the Project Does
+---
 
-Opens all three e-commerce sites
+# **Smart Price Comparison Automation**
 
-Searches for the same product
+*A practical Selenium automation framework built to compare live product prices across e-commerce websites.*
 
-Extracts live prices using stable locators
+---
 
-Compares the values
+## ** Project Overview**
 
-Generates an Excel file with the results
+This project automates the process of checking and comparing the price of a product across:
 
-Highlights the lowest price
+* **Amazon**
+* **Flipkart**
+* **Croma**
 
-Tech Stack
+The framework searches for a product, extracts its price, compares the values, and generates an **Excel report** showing the final results.
 
-Java 17
+---
 
-Selenium WebDriver
+## ** Key Highlights**
 
-TestNG
+* **Live website automation** (no mock or practice sites)
+* **Extracts real-time product prices** using reliable locators
+* **Compares pricing data** across multiple websites
+* **Outputs clean Excel reports** with pricing information
+* **Designed using POM (Page Object Model)** for easy maintenance
+* **Readable, modular, and scalable test structure**
 
-Apache POI (Excel)
+---
 
-Maven
+## ** Tech Stack & Tools**
 
-Page Object Model (POM)
+* **Language:** Java
+* **Automation:** Selenium WebDriver
+* **Testing Framework:** TestNG
+* **Design Pattern:** Page Object Model (POM)
+* **Build Tool:** Maven
+* **Reporting:** Apache POI (Excel)
+* **Version Control:** Git & GitHub
+* **IDE:** IntelliJ IDEA
 
-Why This Project Is Useful
+---
 
-Demonstrates real-world automation (not dummy websites)
+## ** Project Structure**
 
-Shows ability to design a clean, modular test framework
+```
+src/
+ ├─ main/
+ │   └─ java/
+ │        ├─ pages/        → Page classes for each website
+ │        └─ utils/        → DriverFactory, ExcelWriter
+ │
+ └─ test/
+      └─ java/
+           └─ tests/       → BaseTest + PriceComparisonTest
 
-Covers dynamic waits, locator strategies, and data handling
+pom.xml
+testng.xml
+README.md
+```
 
-Built to be extendable for more websites or test cases
+---
 
-Good example of applying automation to solve a practical problem
+## ** What This Project Demonstrates**
 
-How to Run
+* Ability to **design a clean automation framework**
+* Strong understanding of **locators, waits, and dynamic elements**
+* Experience working with **real production websites**
+* Good structure using **POM + utilities + TestNG**
+* Knowledge of **data extraction + reporting**
+* Practical thinking by automating a real use case
+
+This is exactly the type of project product companies like to see in a fresher's profile.
+
+---
+
+## ** How to Run the Project**
+
+### **1. Clone the repository**
+
+```bash
+git clone https://github.com/kamaleswarghosh55/Smart-Price-Comparison-Automation.git
+```
+
+### **2. Install dependencies**
+
+```bash
 mvn clean install
+```
+
+### **3. Run the test suite**
+
+* Run `testng.xml` from IntelliJ
+  **or**
+
+```bash
 mvn test
+```
 
+---
 
-or simply run the testng.xml file from IntelliJ.
+## ** Excel Report Output**
 
-Output
+After the test completes, an Excel file is generated:
 
-Generates an Excel file:
-
+```
 PriceComparisonReport.xlsx
+```
 
+It includes:
 
-Contains:
+* Price from Amazon
+* Price from Flipkart
+* Price from Croma
+* Lowest available price
 
-Amazon price
+---
 
-Flipkart price
+## ** Framework Components (Short Explanation)**
 
-Croma price
+### ** pages/**
 
-Lowest price
+Contains all website-specific actions
 
-Future Improvements
+* `AmazonPage.java`
+* `FlipkartPage.java`
+* `CromaPage.java`
 
-Allure / Extent reporting
+Each class handles:
 
-Support for more e-commerce sites
+* Searching the product
+* Extracting the price
 
-CI/CD pipeline
+---
 
-Parallel execution
+### ** utils/**
 
-Author
+Reusable helper classes
 
-Kamaleswar Ghosh
-GitHub: https://github.com/kamaleswarghosh55
+* `DriverFactory.java` → WebDriver setup and teardown
+* `ExcelWriter.java` → Writes results into Excel
 
-LinkedIn: https://linkedin.com/in/kamaleswarghosh55
+---
+
+### ** tests/**
+
+Full test flow
+
+* `BaseTest.java` → Parent class for tests
+* `PriceComparisonTest.java` → Main comparison logic
+
+---
+
+## ** Future Enhancements**
+
+* Add HTML reporting (Allure or Extent)
+* Add failure screenshots
+* Parallel execution using TestNG
+* Integrate GitHub Actions (CI pipeline)
+* Extend to Reliance Digital / TataCliq / Vijay Sales
+* Add product list (read from Excel or JSON)
+
+---
+
+## ** Author**
+
+**Kamaleswar Ghosh**
+
+* GitHub: [https://github.com/kamaleswarghosh55](https://github.com/kamaleswarghosh55)
+* LinkedIn: [https://linkedin.com/in/kamaleswarghosh55](https://linkedin.com/in/kamaleswarghosh55)
+* Email: *[kamaleswarghosh55@gmail.com](mailto:kamaleswarghosh55@gmail.com)*
+
+---
+
+##  **Support the Project**
+
+If you find this project useful, please consider giving it a **star** on GitHub.
+It helps others discover it and motivates further improvements.
+
+---
