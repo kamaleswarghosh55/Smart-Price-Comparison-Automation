@@ -1,8 +1,10 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Price Comparison Suite">
+
     <test name="Compare Prices">
         <classes>
             <class name="tests.PriceComparisonTest"/>
         </classes>
     </test>
+
 </suite>

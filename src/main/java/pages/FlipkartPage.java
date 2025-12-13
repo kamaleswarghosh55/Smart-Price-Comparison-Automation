@@ -1,7 +1,10 @@
 package pages;
 
 import org.openqa.selenium.*;
-import org.openqa.selenium.support.ui.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class FlipkartPage {
 
@@ -10,26 +13,28 @@ public class FlipkartPage {
 
     public FlipkartPage(WebDriver driver) {
         this.driver = driver;
-        wait = new WebDriverWait(driver, 15);
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
     }
 
-    public int getPrice(String productName) {
+    public int getPrice(String product) {
 
         driver.get("https://www.flipkart.com");
 
         try {
-            WebElement closeBtn = wait.until(ExpectedConditions
-                    .visibilityOfElementLocated(By.cssSelector("button._2KpZ6l._2doB4z")));
-            closeBtn.click();
+            driver.findElement(By.cssSelector("button._2KpZ6l._2doB4z")).click();
         } catch (Exception ignored) {}
 
-        WebElement search = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("q")));
-        search.sendKeys(productName + Keys.ENTER);
+        WebElement search =
+                wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("q")));
+        search.sendKeys(product + Keys.ENTER);
 
-        WebElement price = wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.cssSelector("div._30jeq3._1_WHN1")));
+        WebElement price =
+                wait.until(ExpectedConditions.visibilityOfElementLocated(
+                        By.xpath("(//a[contains(@href,'/p/')])[1]//div[contains(text(),'₹')]")
+                ));
 
-        String amount = price.getText().replaceAll("[^0-9]", "");
-        return Integer.parseInt(amount);
+        return Integer.parseInt(
+                price.getText().replace("₹", "").replace(",", "").trim()
+        );
     }
 }
